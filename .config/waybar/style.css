@@ -1,0 +1,25 @@
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px;
+  color: #ffffff;
+  background: transparent;
+}
+
+window#waybar {
+  background-color: rgba(10, 10, 10, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#custom-arch,
+#clock,
+#memory,
+#cpu,
+#network,
+#wireplumber,
+#custom-mic,
+#battery,
+#custom-power {
+  padding: 0 10px;
+}

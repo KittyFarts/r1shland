@@ -1,0 +1,51 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "modules-left": ["custom/arch"],
+  "modules-center": ["clock"],
+  "modules-right": ["memory", "cpu", "network", "wireplumber", "custom/mic", "battery", "custom/power"],
+  "custom/arch": {
+    "format": "",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+  "memory": {
+    "format": "󰍛 {}%",
+    "interval": 10
+  },
+  "cpu": {
+    "format": " {}%",
+    "interval": 5
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀",
+    "tooltip": true,
+    "interval": 10
+  },
+  "wireplumber": {
+    "format": "󰕾 {}%",
+    "on-click": "pavucontrol"
+  },
+  "custom/mic": {
+    "format": "",
+    "tooltip": "Toggle mic mute",
+    "exec": "pamixer --default-source --get-mute | grep -q true && echo '' || echo ''",
+    "on-click": "pamixer --default-source -t",
+    "interval": 5
+  },
+  "battery": {
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", ""],
+    "interval": 30
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": "Power Menu"
+  }
+}
